@@ -1,0 +1,6 @@
+<?php
+/**
+ * @package  eWay Rapid Joomla! HikaShop
+ * @see      https://github.com/eWAYPayment/eway-rapid-php
+ */
+?>
