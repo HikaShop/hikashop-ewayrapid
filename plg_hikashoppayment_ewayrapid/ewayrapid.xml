@@ -9,7 +9,7 @@
 	<authorUrl>http://www.obsidev.com</authorUrl>
 	<copyright>Copyright (C) 2012-{__YEAR__} OBSIDEV SARL - All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-	<description>This plugin allow to log the downloads</description>
+	<description>This plugin allow to pay with the eWay Rapid payment gateway</description>
 	<files>
 		<filename plugin="ewayrapid">ewayrapid.php</filename>
 		<filename>ewayrapid_bridge.php</filename>
