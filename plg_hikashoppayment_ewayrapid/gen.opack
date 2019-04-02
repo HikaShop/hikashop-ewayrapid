@@ -26,6 +26,9 @@
 		<file name="ewayrapid.xml">
 			<rule type="*" action="sourcecode" param="replace" />
 		</file>
+		<file name="index.html">
+			<rule type="*" action="sourcecode" param="replace" />
+		</file>
 		<directory name="ewayrapid_lib\" filter="*.*" subDirs="true">
 			<rules>
 				<rule type="directory" action="addfile" param="index.html" />
