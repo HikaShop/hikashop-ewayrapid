@@ -106,9 +106,14 @@ class plgHikashoppaymentEwayrapid extends hikashopPaymentPlugin
 			$app = JFactory::getApplication();
 			$error_msg = array();
 			foreach($this->response->getErrors() as $error) {
-				$error_mgs[] = eWayRapidBridge::getErrorMessage(trim($error));
+				$msg = eWayRapidBridge::getErrorMessage(trim($error));
+				if(!(empty($msg) && is_string($msg))
+					$error_mgs[] = $msg;
 			}
-			$this->app->enqueueMessage('eWay Errors<br/>'.implode('<br/>', $error_msgs), 'error');
+			$msg = 'eWay Errors<br/>';
+			if(count($error_msg))
+				$msg .= implode('<br/>', $error_msgs);
+			$this->app->enqueueMessage($msg, 'error');
 		}
 
 		return $this->showPage('end');
