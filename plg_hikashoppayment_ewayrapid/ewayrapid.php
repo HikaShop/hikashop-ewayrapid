@@ -108,11 +108,11 @@ class plgHikashoppaymentEwayrapid extends hikashopPaymentPlugin
 			foreach($this->response->getErrors() as $error) {
 				$msg = eWayRapidBridge::getErrorMessage(trim($error));
 				if(!(empty($msg) && is_string($msg))
-					$error_mgs[] = $msg;
+					$error_msg[] = $msg;
 			}
 			$msg = 'eWay Errors<br/>';
 			if(count($error_msg))
-				$msg .= implode('<br/>', $error_msgs);
+				$msg .= implode('<br/>', $error_msg);
 			$this->app->enqueueMessage($msg, 'error');
 		}
 
