@@ -1,6 +1,6 @@
 <div class="hikashop_eway_end" id="hikashop_eway_end">
 <?php
-	JRequest::setVar('noform',1);
+	hikaInput::get()->set('noform',1);
 
 	if(!$this->response->getErrors()) {
 ?>
